@@ -15,7 +15,7 @@ class Usuario
 end
 
 class CuentaBancaria
-    attr_accessor :saldo
+    attr_accessor :saldo, :numero_de_cuenta
     def initialize(nombre, numero_de_cuenta, saldo = 0)
         @nombre = nombre
         @numero_de_cuenta = numero_de_cuenta
@@ -24,7 +24,7 @@ class CuentaBancaria
     end
 
     def transferir(monto, otra_cuenta)
-        @saldo -= monto
+        self.saldo -= monto
         otra_cuenta.saldo += monto
     end
 end
