@@ -5,3 +5,7 @@ class Carta
         @pinta = pinta
     end
 end
+
+c1 = Carta.new
+
+pp c1

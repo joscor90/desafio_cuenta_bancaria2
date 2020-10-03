@@ -33,3 +33,5 @@ class Baraja
 end
 
 b1 = Baraja.new
+
+pp b1
