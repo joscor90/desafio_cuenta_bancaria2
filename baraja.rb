@@ -32,6 +32,7 @@ class Baraja
     end
 end
 
+#
 b1 = Baraja.new
 
 pp b1

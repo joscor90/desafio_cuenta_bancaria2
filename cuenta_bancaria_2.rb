@@ -5,9 +5,9 @@ class Usuario
         @cuentas = cuentas
     end
 
-    def saldo(user)
+    def saldo
         saldo_total = 0
-        user.cuentas.each do |i|
+        self.cuentas.each do |i|
             saldo_total += i.saldo
         end
         return saldo_total
@@ -19,7 +19,7 @@ class CuentaBancaria
     def initialize(nombre, numero_de_cuenta, saldo = 0)
         @nombre = nombre
         @numero_de_cuenta = numero_de_cuenta
-        raise RangeError if @numero_de_cuenta.digits.count != 8
+        raise RangeError if numero_de_cuenta.digits.count != 8
         @saldo = saldo
     end
 
@@ -49,7 +49,7 @@ user1 = Usuario.new('Pancho', [c3, c4])
 pp user1
 
 #Testeando el método saldo de la clase Usuario
-total = user1.saldo(user1)
+total = user1.saldo
 
 #Segundo output test
-pp total
+pp "El saldo total de Pancho es #{total}"
